@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { readContract, writeContract } from "@/lib/contract";
+import { readContract, writeContract } from "@/lib/contracts";
 import { formatUnits, parseUnits } from "viem";
 
 export default function Dashboard() {
