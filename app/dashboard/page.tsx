@@ -32,9 +32,9 @@ export default function Dashboard() {
     try {
       const [balanceRes, claimableRes, stakeRes, rewardRes] = await Promise.all([
         readContract("token", "balanceOf", [wallet]),
-        readContract("dashboard", "getClaimable", [wallet]),
-        readContract("dashboard", "getStakingBalance", [wallet]),
-        readContract("dashboard", "getReward", [wallet]),
+        writeContract("dashboard", "getClaimable", [wallet]),
+        writeContract("dashboard", "getStakingBalance", [wallet]),
+        writeContract("dashboard", "getReward", [wallet]),
       ]);
       setWalletBalance(Number(formatUnits(balanceRes)));
       setClaimable(Number(formatUnits(claimableRes)));

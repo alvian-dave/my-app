@@ -27,11 +27,11 @@ export const WRC_ABI = [
 ];
 
 // Fungsi untuk inisialisasi kontrak Dashboard
-export const getDashboardContract = (providerOrSigner: ethers.Provider | ethers.Signer) => {
+export const writeContract = (providerOrSigner: ethers.Provider | ethers.Signer) => {
   return new ethers.Contract(DASHBOARD_CONTRACT_ADDRESS, DASHBOARD_ABI, providerOrSigner);
 };
 
 // Fungsi untuk inisialisasi kontrak Token
-export const getWRCContract = (providerOrSigner: ethers.Provider | ethers.Signer) => {
+export const readContract = (providerOrSigner: ethers.Provider | ethers.Signer) => {
   return new ethers.Contract(WRC_TOKEN_ADDRESS, WRC_ABI, providerOrSigner);
 };
